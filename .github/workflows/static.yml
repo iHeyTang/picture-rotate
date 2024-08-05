@@ -27,9 +27,14 @@ jobs:
       - name: Verify build output
         run: ls -la ./dist
 
-      - name: Deploy 🚀 # 第三步：部署
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: dist # 部署的目录
-          branch: gh-pages # 部署到哪个分支
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload dist repository
+          path: "./dist"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
