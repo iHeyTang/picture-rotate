@@ -27,8 +27,9 @@ jobs:
       - name: Verify build output
         run: ls -la ./dist
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy 🚀 # 第三步：部署
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          folder: dist # 部署的目录
+          branch: gh-pages # 部署到哪个分支
+
