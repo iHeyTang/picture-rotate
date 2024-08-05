@@ -1,8 +1,8 @@
 import * as THREE from "three";
+import CLOTH_URL from "./assets/cloth.jpg";
 
 const IMAGE_URL =
   "https://cdn.shopify.com/s/files/1/0741/5129/7333/files/exam-test.jpg";
-const CLOTH_URL = "/cloth.jpg";
 
 // 是否自动旋转
 let isRotating = true;
